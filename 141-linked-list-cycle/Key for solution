@@ -1,1 +1,1 @@
-
+Check for null or single node; use two pointers, slow and fast, to traverse the list, with fast moving twice as fast as slow; detect cycle by checking if slow and fast pointers meet or if fast or fast.next becomes null.
