@@ -1,0 +1,1 @@
+Return False if input is less than or equal to zero; continuously divide input by 4 until it's no longer divisible by 4, if result is 1, input is power of four, otherwise not.
