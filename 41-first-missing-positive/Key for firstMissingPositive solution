@@ -1,0 +1,1 @@
+Place each positive integer in its correct position by swapping, then find the first missing positive integer by checking if nums[i] != i + 1, return i + 1; if all integers from 1 to n are present, return n + 1.
