@@ -1,0 +1,1 @@
+Return an empty string if input is empty; iterate from end towards beginning to find longest palindrome suffix; construct shortest palindrome by adding reversed prefix, shortest palindrome of remaining prefix, and original suffix.
