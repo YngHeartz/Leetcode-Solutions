@@ -1,0 +1,1 @@
+Create a set 'z' to store unique elements of nums, initialize an empty list 'x' to store missing numbers, iterate over numbers from 1 to length of nums, if current number 'num' is not in set 'z', append it to list 'x', return list 'x'.
