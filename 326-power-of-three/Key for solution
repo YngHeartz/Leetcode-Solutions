@@ -1,0 +1,1 @@
+Return False if input is less than or equal to zero; continuously divide input by 3 until it's no longer divisible by 3, if result is 1, input is power of three, otherwise not.
