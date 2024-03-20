@@ -1,1 +1,1 @@
-
+Check for whitespace; filter non-alphanumeric characters and convert to lowercase; use a two-pointer approach to compare characters from both ends.
