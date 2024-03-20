@@ -1,0 +1,1 @@
+Convert integer 'x' to string 'k', initialize 'left' and 'right' pointers, iterate with a while loop until 'left' is less than or equal to 'right', check if characters at 'left' and 'right' are equal, return False if not, move 'left' one step right and 'right' one step left, return True if loop completes without finding unequal characters.
