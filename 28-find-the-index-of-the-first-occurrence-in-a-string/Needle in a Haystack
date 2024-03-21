@@ -1,0 +1,1 @@
+Utilize the find() method to locate the index of the needle within the haystack. If found, return the index; otherwise, return -1.
