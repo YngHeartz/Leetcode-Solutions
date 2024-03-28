@@ -1,0 +1,1 @@
+Use a itertools.permutations(nums) this will create all permutations of the variable nums.
