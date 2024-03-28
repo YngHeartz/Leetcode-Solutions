@@ -1,0 +1,1 @@
+Sort nums, itterate through the numbers in range from 1 to len of nums if the num in position[i] is the same as nums position[i - 1] return the num in the nums[i] position.
