@@ -1,0 +1,1 @@
+Store the itertools.permutations(nums) into a variable then you want to create an empty list, then append all the permutations that are not in the list into the empty list this will result in no duplicate permutations and only unuiqe permutations.
