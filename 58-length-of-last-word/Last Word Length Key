@@ -1,0 +1,1 @@
+Split the string into words, return the length of the last word; if no words found, return 0.
