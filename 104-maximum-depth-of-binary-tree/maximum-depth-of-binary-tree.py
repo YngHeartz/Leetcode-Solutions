@@ -6,9 +6,9 @@
 #         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        #Base case
+        #Base Case
         if not root:
             return 0
-
-        #Returns 
+        
+        #Recursive call where 1 is keeping track of the length of the two subtrees
         return 1 + max(self.maxDepth(root.right), self.maxDepth(root.left))
