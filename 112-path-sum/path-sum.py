@@ -8,14 +8,14 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         #Base Case
         if not root:
-            return False
+            return
         
-        #if we reach a leaf node check to see if the value in leaf node is equal to the target sum
+        #If leaf node compare val to targetSum
         if not root.right and not root.left:
-            return root.val == targetSum
-        
-        #Decrement the target sum by the current value in the current node
+            return targetSum == root.val
+
+        #Decrement step        
         targetSum -= root.val
 
-        #Recursive step to check the left and right side of the tree
-        return self.hasPathSum(root.left, targetSum) or self.hasPathSum(root.right, targetSum)
+        #Recursive step to check left and right subtrees
+        return self.hasPathSum(root.right, targetSum) or self.hasPathSum(root.left, targetSum)
