@@ -12,21 +12,22 @@ class Solution:
             if not root:
                 return
             
-            #If leaf node append val to leaf array
+            #If leaf node append to leaf array
             if not root.right and not root.left:
                 leaf.append(root.val)
-            
-            #Recursivly call the dfs function on right and left subtree
+                return
+
+            #Recursive step to get all leaf's
             dfs(root.right, leaf)
             dfs(root.left, leaf)
-        
-        
-        #Create two empty arrays
-        leaf1, leaf2 = [], []
 
-        #Call dfs function on roo1 and root2 and then save vals to each array respectivly
+                
+        #Create empty arrays
+        leaf1, leaf2 = [], []
+        
+        #Call dfs function on the root1 and root2 trees
         dfs(root1, leaf1)
         dfs(root2, leaf2)
 
-        #Compare leaf1 array to leaf2 array if same return True else return False
+        #Comparison between two arrays
         return leaf1 == leaf2
