@@ -13,9 +13,9 @@ class Solution:
             
             if not root.right and not root.left:
                 leaf.append(root.val)
-
-            dfs(root.right, leaf)
+            
             dfs(root.left, leaf)
+            dfs(root.right, leaf)
 
         leaf1, leaf2 = [], []
 
