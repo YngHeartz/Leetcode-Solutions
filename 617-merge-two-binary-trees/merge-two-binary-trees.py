@@ -14,7 +14,9 @@ class Solution:
         if not root2:
             return root1
         
+        #Create new tree with the new vals
         merged = TreeNode(root1.val + root2.val)
+        #Treverse through the right and left subtrees
         merged.right = self.mergeTrees(root1.right, root2.right)
         merged.left = self.mergeTrees(root1.left, root2.left)
 
