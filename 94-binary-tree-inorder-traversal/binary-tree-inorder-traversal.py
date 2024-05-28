@@ -6,22 +6,17 @@
 #         self.right = right
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        #Create empty array
+        #Empty Array
         res = []
-
-        #Define a helper function
         def helper(root):
-            #Base case
+            #Base Case
             if not root:
                 return
-
-            #append the left most root
+            #Recursive Call on the left subtree and right subtree
             helper(root.left)
             res.append(root.val)
             helper(root.right)
-            
-        #Recursive call onto the root
+        #Call the helper function on the root
         helper(root)
-        
         #Return the res array
-        return res
+        return res            
