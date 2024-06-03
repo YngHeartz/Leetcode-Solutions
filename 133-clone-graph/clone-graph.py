@@ -17,10 +17,12 @@ class Solution:
         def dfs(node):
             if node in nto:
                 return nto[node]
-
+            
             copy = Node(node.val)
             nto[node] = copy
+
             for n in node.neighbors:
                 copy.neighbors.append(dfs(n))
             return copy
+
         return dfs(node)
