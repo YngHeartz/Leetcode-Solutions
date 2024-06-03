@@ -12,15 +12,14 @@ class Solution:
         if not node:
             return
         
-        oldToNew = {}
+        nto = {}
 
         def dfs(node):
-            if node in oldToNew:
-                return oldToNew[node]
-            
-            copy = Node(node.val)
-            oldToNew[node] = copy
+            if node in nto:
+                return nto[node]
 
+            copy = Node(node.val)
+            nto[node] = copy
             for n in node.neighbors:
                 copy.neighbors.append(dfs(n))
             return copy
