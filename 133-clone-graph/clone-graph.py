@@ -24,5 +24,4 @@ class Solution:
             for n in node.neighbors:
                 copy.neighbors.append(dfs(n))
             return copy
-
         return dfs(node)
