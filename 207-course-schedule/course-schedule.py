@@ -26,4 +26,3 @@ class Solution:
             if not dfs(crs):
                 return False
         return True
-    
