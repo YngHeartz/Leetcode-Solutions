@@ -4,21 +4,22 @@ class Solution:
 
         for crs, pre in prerequisites:
             preMap[crs].append(pre)
-
-        visitSet = set()
+        
+        visitedSet = set()
 
         def dfs(crs):
-            if crs in visitSet:
+            #Base Cases
+            if crs in visitedSet:
                 return False
             if preMap[crs] == []:
                 return True
             
-            visitSet.add(crs)
+            visitedSet.add(crs)
 
             for pre in preMap[crs]:
                 if not dfs(pre):
                     return False
-            visitSet.remove(crs)
+            visitedSet.remove(crs)
             preMap[crs] = []
             return True
 
