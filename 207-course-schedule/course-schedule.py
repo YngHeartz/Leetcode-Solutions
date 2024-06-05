@@ -4,27 +4,29 @@ class Solution:
 
         for crs, pre in prerequisites:
             prevMap[crs].append(pre)
-
-        scott = set()
+        
+        visitedSet = set()
 
         def dfs(crs):
-            if crs in scott:
+            if crs in visitedSet:
                 return False
             if prevMap[crs] == []:
                 return True
 
-            scott.add(crs)
+            visitedSet.add(crs)
 
             for pre in prevMap[crs]:
                 if not dfs(pre):
                     return False
 
-            scott.remove(crs)
+            visitedSet.remove(crs)
             prevMap[crs] = []
 
             return True
 
+
         for crs in range(numCourses):
             if not dfs(crs):
                 return False
+                
         return True
