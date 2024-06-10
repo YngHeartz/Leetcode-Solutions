@@ -5,28 +5,28 @@ class Solution:
         for crs, pre in prerequisites:
             prevMap[crs].append(pre)
         
-        visitedSet = set()
+        Listset = set()
 
-        def dfs(crs):
-            if crs in visitedSet:
+        def helper(crs):
+            if crs in Listset:
                 return False
             if prevMap[crs] == []:
                 return True
-
-            visitedSet.add(crs)
+            
+            Listset.add(crs)
 
             for pre in prevMap[crs]:
-                if not dfs(pre):
+                if not helper(pre):
                     return False
-
-            visitedSet.remove(crs)
+                    
+            Listset.remove(crs)
             prevMap[crs] = []
 
             return True
-
+            
 
         for crs in range(numCourses):
-            if not dfs(crs):
+            if not helper(crs):
                 return False
                 
         return True
