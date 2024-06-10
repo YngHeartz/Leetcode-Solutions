@@ -9,20 +9,20 @@ class Node:
 from typing import Optional
 class Solution:
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
-        #Base Case
         if not node:
             return None
         
-        scott = {}
+        otn = {}
 
         def dfs(node):
-            if node in scott:
-                return scott[node]
+            if node in otn:
+                return otn[node]
             
             copy = Node(node.val)
-            scott[node] = copy
+            otn[node] = copy
 
             for n in node.neighbors:
                 copy.neighbors.append(dfs(n))
             return copy
+
         return dfs(node)
