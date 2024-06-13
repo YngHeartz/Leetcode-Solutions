@@ -4,27 +4,28 @@ class Solution:
 
         for crs, pre in prerequisites:
             preMap[crs].append(pre)
+        
+        listset = set()
 
-        listSet = set()
-
-        def dfs(crs):
-            if crs in listSet:
+        def helper(crs):
+            if crs in listset:
                 return False
             if preMap[crs] == []:
                 return True
             
-            listSet.add(crs)
+            listset.add(crs)
 
             for pre in preMap[crs]:
-                if not dfs(pre):
+                if not helper(pre):
                     return False
             
-            listSet.remove(crs)
+            listset.remove(crs)
             preMap[crs] = []
 
             return True
 
         for crs in range(numCourses):
-            if not dfs(crs):
+            if not helper(crs):
                 return False
+
         return True
