@@ -10,11 +10,12 @@ class Solution:
 
         def dfs(root):
             if not root:
-                return []
+                return
             
             dfs(root.left)
             res.append(root.val)
             dfs(root.right)
+            
         dfs(root)
 
         return res
