@@ -7,9 +7,9 @@ class Solution:
                 num = board[row][col]
 
                 if num != '.':
-                    row_key = f'{num} in row {row}'
+                    row_key = f'{num} in row{row}'
                     col_key = f'{num} in col {col}'
-                    subgrid_key = f'{num} in subgrid {row//3}{col//3}'
+                    subgrid_key = f'{num} in subgrid{row//3}{col//3}'
 
                     if row_key in seen or col_key in seen or subgrid_key in seen:
                         return False
