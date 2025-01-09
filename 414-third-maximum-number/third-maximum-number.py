@@ -1,6 +1,5 @@
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        res = []
         nums = set(nums)
 
         if len(nums) > 2:
