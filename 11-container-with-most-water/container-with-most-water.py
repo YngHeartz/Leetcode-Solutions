@@ -11,6 +11,7 @@ class Solution:
             min_height = min(height[left], height[right])
             max_water = max(max_water, width * min_height)
 
+            # need to itterate over the height array left and right and not just left and right, instead of the position left and right. we need to check the values not just the position left and right
             if height[left] < height[right]:
                 left += 1
             else:
