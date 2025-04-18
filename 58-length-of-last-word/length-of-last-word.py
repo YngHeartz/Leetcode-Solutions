@@ -4,9 +4,6 @@ class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         res = []
 
-        # if len(s.strip()) == 1:
-        #     return 1
-
         for char in s.strip() [::-1]:
                 res.append(char)
                 if char.isspace():
@@ -14,4 +11,3 @@ class Solution:
         
         if ' ' not in s.strip():
             return len(s.strip())
-        print(res)
