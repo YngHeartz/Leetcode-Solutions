@@ -4,8 +4,8 @@ class Solution:
     def lengthOfLastWord(self, s: str) -> int:
         res = []
 
-        if len(s.strip()) == 1:
-            return 1
+        # if len(s.strip()) == 1:
+        #     return 1
 
         for char in s.strip() [::-1]:
                 res.append(char)
