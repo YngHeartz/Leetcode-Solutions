@@ -1,8 +1,5 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
-            return False
-        
         char_dict = {}
         char_set = set()
 
@@ -16,5 +13,8 @@ class Solution:
                     return False
                 char_dict[char_s] = char_t
                 char_set.add(char_t)
+
+        print(char_dict)
+        print(char_set)
         
         return True
