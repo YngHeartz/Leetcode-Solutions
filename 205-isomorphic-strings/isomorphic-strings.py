@@ -13,8 +13,5 @@ class Solution:
                     return False
                 char_dict[char_s] = char_t
                 char_set.add(char_t)
-
-        print(char_dict)
-        print(char_set)
         
         return True
