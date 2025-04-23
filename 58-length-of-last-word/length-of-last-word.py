@@ -8,4 +8,4 @@ class Solution:
                 return len(res) - 1
         
         if ' ' not in s.strip():
-            return len(s.strip())
+            return len(res)
