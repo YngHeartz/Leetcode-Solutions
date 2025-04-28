@@ -9,13 +9,14 @@ class Solution:
                 if num != '.':
                     rk = f'{num} in row {row}'
                     ck = f'{num} in col {col}'
-                    sg = f'{num} in subgrid {row//3}{col//3}'
+                    sg = f'{num} in row {row//3}{col//3}'
 
                     if rk in seen or ck in seen or sg in seen:
                         return False
-                    
+                
                     seen.add(rk)
                     seen.add(ck)
                     seen.add(sg)
+
         
         return True
